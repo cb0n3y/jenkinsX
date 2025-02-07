@@ -16,16 +16,20 @@ spec:
     provider: minikube
   environments:
   - key: dev
+    owner: cb0n3y
+    repository: jenkinsX
   - key: staging
   - key: production
   ingress:
     domain: ""
-    externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: cb0n3y
   repository: bucketrepo
   secretStorage: local
   vault: {}
